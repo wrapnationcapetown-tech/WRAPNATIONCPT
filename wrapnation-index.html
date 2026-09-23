@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WrapNation | Vehicle Customisation</title>
+<meta name="description" content="WrapNation premium vehicle wrapping, tint, PPF and customisation in Cape Town.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070707;color:#fff;font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}
+:root{--red:#e10600;--panel:#111214;--muted:#9b9b9b}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.9);backdrop-filter:blur(14px);border-bottom:1px solid #242424;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;letter-spacing:2px;font-size:21px}.logo span{color:var(--red)}nav a{margin-left:20px;color:#ccc;font-size:13px;font-weight:700}
+.hero{min-height:78vh;padding:80px 6%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 30%,#3a0505 0,#100303 28%,#070707 65%)}.eyebrow{color:#ff3028;letter-spacing:4px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(42px,9vw,100px);line-height:.9;margin:18px 0;font-weight:950;letter-spacing:-4px}.hero p{max-width:650px;margin:0 auto 28px;color:#bbb;font-size:17px}.btn{display:inline-block;padding:15px 22px;border-radius:10px;background:var(--red);font-weight:900;margin:5px;border:1px solid #ff3a34}.btn.alt{background:#161616;border-color:#333}
+section{padding:70px 6%;max-width:1250px;margin:auto}.section-title{font-size:clamp(30px,5vw,55px);margin:0 0 12px;font-weight:900}.lead{color:#999;max-width:700px;margin-bottom:35px}
+.config{background:#0c0d0f;border:1px solid #242424;border-radius:22px;padding:22px;box-shadow:0 20px 70px #000}.car{height:300px;border-radius:18px;background:linear-gradient(135deg,#171717,#050505);display:grid;place-items:center;position:relative;overflow:hidden;margin-bottom:25px}.car:before{content:"";width:72%;height:90px;border-radius:55% 45% 25% 25%;background:var(--car,#d71920);box-shadow:0 22px 0 -4px #050505;transform:skewX(-8deg);position:absolute;top:105px}.car:after{content:"";width:42%;height:35px;background:#090909;border-radius:50%;position:absolute;top:120px;box-shadow:130px 0 0 #090909}.car .badge{position:absolute;bottom:18px;left:20px;z-index:2;color:#fff;font-size:11px;letter-spacing:3px;font-weight:900}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.control{background:#151619;border:1px solid #292a2d;border-radius:14px;padding:16px}.control h3{font-size:12px;letter-spacing:1px;text-transform:uppercase;margin:0 0 12px;color:#aaa}.options{display:flex;gap:8px;flex-wrap:wrap}.opt{border:1px solid #393939;background:#202124;color:#fff;border-radius:9px;padding:10px 11px;font-size:12px;font-weight:800;cursor:pointer}.opt.active{border-color:var(--red);box-shadow:0 0 0 1px var(--red) inset}.swatch{width:30px;height:30px;border-radius:50%;padding:0}.summary{margin-top:16px;background:#090909;border:1px solid #272727;border-radius:14px;padding:17px;display:flex;justify-content:space-between;gap:20px;align-items:center}.summary strong{font-size:18px}.summary small{color:#888}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid #262626;border-radius:16px;padding:24px}.card h3{margin-top:0}.card p{color:#999;line-height:1.6;font-size:14px}
+.quote{background:linear-gradient(120deg,#1a0505,#0d0d0d);border:1px solid #3a1111;border-radius:22px;padding:35px}.quote input,.quote textarea{width:100%;margin:7px 0;padding:15px;border-radius:9px;border:1px solid #333;background:#090909;color:#fff}.quote textarea{min-height:120px}.quote form{max-width:700px}
+footer{border-top:1px solid #222;padding:35px 6%;color:#777;text-align:center;font-size:13px}.mobilebar{display:none}
+@media(max-width:750px){nav a{display:none}.controls,.grid{grid-template-columns:1fr}.hero{min-height:70vh}.car{height:240px}.summary{flex-direction:column;align-items:flex-start}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:#0b0b0b;border-top:1px solid #333;padding:10px;gap:7px}.mobilebar a{flex:1;text-align:center;padding:12px 4px;background:#191919;border-radius:8px;font-size:11px;font-weight:900}.mobilebar a:last-child{background:var(--red)}body{padding-bottom:66px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">WRAP<span>NATION</span></div><div><a href="#config">CONFIGURATOR</a><a href="#services">SERVICES</a><a href="#quote">GET A QUOTE</a></div></nav>
+
+<header class="hero"><div><div class="eyebrow">CAPE TOWN • PREMIUM VEHICLE CUSTOMISATION</div><h1>YOUR RIDE.<br>YOUR VISION.</h1><p>Build your look before you book. Explore wrap colours, finishes, wheels, accessories and tint shades with the WrapNation configurator.</p><a class="btn" href="#config">START YOUR BUILD</a><a class="btn alt" href="#quote">GET A QUOTE</a></div></header>
+
+<section id="config"><div class="eyebrow">INTERACTIVE BUILD</div><h2 class="section-title">CONFIGURE YOUR RIDE</h2><p class="lead">Choose your style. Your build updates instantly.</p>
+<div class="config"><div class="car" id="car"><div class="badge">WRAPNATION BUILD</div></div>
+<div class="controls">
+<div class="control"><h3>Wrap Colour</h3><div class="options" id="colours"></div></div>
+<div class="control"><h3>Finish</h3><div class="options" id="finishes"></div></div>
+<div class="control"><h3>Wheels</h3><div class="options" id="wheels"></div></div>
+<div class="control"><h3>Accessories</h3><div class="options" id="accessories"></div></div>
+<div class="control"><h3>Window Tint</h3><div class="options" id="tints"></div></div>
+<div class="control"><h3>Build Summary</h3><div id="details" style="color:#aaa;font-size:13px;line-height:1.8"></div></div>
+</div><div class="summary"><div><small>ESTIMATED BUILD</small><br><strong id="price">From R0</strong></div><a class="btn" id="quoteBtn" href="#quote">QUOTE THIS BUILD</a></div></div></section>
+
+<section id="services"><div class="eyebrow">WHAT WE DO</div><h2 class="section-title">BUILT TO STAND OUT.</h2><div class="grid">
+<div class="card"><h3>Full Vehicle Wraps</h3><p>Complete colour changes and premium finish transformations.</p></div>
+<div class="card"><h3>PPF</h3><p>Paint protection solutions for the areas that take the most abuse.</p></div>
+<div class="card"><h3>Window Tint</h3><p>Choose your shade and finish for privacy, style and comfort.</p></div>
+<div class="card"><h3>Chrome Delete</h3><p>Black out exterior trim for a sharper, cleaner look.</p></div>
+<div class="card"><h3>Custom Graphics</h3><p>Custom branding, graphics and visual designs for your vehicle.</p></div>
+<div class="card"><h3>Commercial & Fleet</h3><p>Professional vehicle branding for businesses and fleets.</p></div>
+</div></section>
+
+<section><div class="quote"><div class="eyebrow">WRAPNATION</div><h2 class="section-title">YOUR BUILD. YOUR CALL.</h2><p class="lead">Mobile service available in Cape Town and surrounding areas. Send us your build and we'll take it from there.</p><a class="btn" href="#quote">START YOUR QUOTE</a></div></section>
+
+<section id="quote"><div class="eyebrow">BOOK YOUR BUILD</div><h2 class="section-title">GET A QUOTE</h2><div class="quote"><form onsubmit="sendQuote(event)"><input id="name" placeholder="Your name" required><input id="phone" placeholder="WhatsApp number" required><input id="vehicle" placeholder="Vehicle (e.g. BMW M3)" required><textarea id="message" placeholder="Tell us what you want done"></textarea><button class="btn" type="submit">SEND ON WHATSAPP</button></form></div></section>
+
+<footer>© 2026 WrapNation • Premium Vehicle Customisation • Cape Town</footer>
+<div class="mobilebar"><a href="#config">BUILD</a><a href="#services">SERVICES</a><a href="#quote">QUOTE</a><a href="https://wa.me/27800000000">WHATSAPP</a></div>
+
+<script>
+const state={colour:"Gloss Red",finish:"Gloss",wheels:"Gloss Black",accessory:"None",tint:"35%",price:0};
+const data={
+colours:[["Gloss Red","#d71920"],["Satin Black","#171717"],["Gloss Black","#050505"],["White","#eee"],["Silver","#aaa"],["Bronze","#7b4b2b"],["Blue","#154d9b"],["Green","#175f40"]],
+finishes:["Gloss","Satin","Matte","Metallic","Chrome","Colour Shift","Carbon"],
+wheels:["Gloss Black","Matte Black","Bronze","Silver","Gold","Red"],
+accessories:["None","Carbon Rear Wing","Front Splitter","Side Skirts","Rear Diffuser","Carbon Mirrors"],
+tints:["50%","35%","20%","5%"]
+};
+function make(id,arr,click){
+ const el=document.getElementById(id); el.innerHTML="";
+ arr.forEach((v,i)=>{let b=document.createElement("button");b.className="opt"+(i===0?" active":"");b.textContent=Array.isArray(v)?v[0]:v;b.onclick=()=>{[...el.children].forEach(x=>x.classList.remove("active"));b.classList.add("active");click(v)};el.appendChild(b)})
+}
+make("colours",data.colours,v=>{state.colour=v[0];document.getElementById("car").style.setProperty("--car",v[1]);update()});
+make("finishes",data.finishes,v=>{state.finish=v;update()});
+make("wheels",data.wheels,v=>{state.wheels=v;update()});
+make("accessories",data.accessories,v=>{state.accessory=v;update()});
+make("tints",data.tints,v=>{state.tint=v;update()});
+function update(){let p=3500;if(state.finish==="Chrome")p+=2500;if(state.finish==="Colour Shift")p+=1800;if(state.finish==="Carbon")p+=1500;if(state.accessory!=="None")p+=1200;if(state.tint==="5%")p+=900;state.price=p;document.getElementById("price").textContent="From R"+p.toLocaleString();document.getElementById("details").innerHTML=`Wrap: <b>${state.colour}</b><br>Finish: <b>${state.finish}</b><br>Wheels: <b>${state.wheels}</b><br>Accessory: <b>${state.accessory}</b><br>Tint: <b>${state.tint}</b>`}
+function sendQuote(e){e.preventDefault();let text=`WrapNation quote request%0AName: ${name.value}%0AWhatsApp: ${phone.value}%0AVehicle: ${vehicle.value}%0ABuild: ${state.colour}, ${state.finish}, ${state.wheels}, ${state.accessory}, tint ${state.tint}%0A${message.value}`;location.href="https://wa.me/27800000000?text="+text}
+update();
+</script>
+</body></html>
